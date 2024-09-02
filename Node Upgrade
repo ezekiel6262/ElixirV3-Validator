@@ -1,0 +1,4 @@
+docker kill elixir && \
+docker rm elixir && \
+docker pull elixirprotocol/validator:v3 && \
+docker run -d --env-file /root/elixir/validator.env --name elixir --restart unless-stopped elixirprotocol/validator:v3
