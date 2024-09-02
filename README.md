@@ -1,6 +1,8 @@
 # ElixirV3-Validator Guide
 
-Elixir is a modular DPoS network built to power liquidity on orderbook exchanges. 
+Elixir is a modular DPoS network built to power liquidity on orderbook exchanges. Elixir's validator network is at the core of the network's technical infrastructure.
+
+Validators are a key component of the Elixir stack, responsible for executing the underlying algorithm and reaching consensus within the network. 
 
 Note that this vlidator has no promise of future rewrds. Run if you've got the resources.
 
