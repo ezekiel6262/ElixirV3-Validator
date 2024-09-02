@@ -1,8 +1,12 @@
 # ElixirV3-Validator Guide
 
+Elixir is a modular DPoS network built to power liquidity on orderbook exchanges. 
+
 Note that this vlidator has no promise of future rewrds. Run if you've got the resources.
 
 ## Requirements
+
+Most hardware is capable of running a validator node. However, it is recommended that you have a system that can be run 24 hours a day, with 8GB of memory and a reliable 100Mbit internet connection. Disk usage is minimal; in most cases, 100GB of storage should be enough.
 
 - You need to buy a VPS for running the Elixir validator
 - You can buy from VPS Provider of your choice
@@ -52,10 +56,10 @@ At this point, you will be adding your details which includes your wallet addres
 
 ### Add your details in the file (Example below)
 
-STRATEGY_EXECUTOR_IP_ADDRESS=your IP address
-STRATEGY_EXECUTOR_DISPLAY_NAME=your moniker
-STRATEGY_EXECUTOR_BENEFICIARY=your wallet address for validator rewards
-SIGNER_PRIVATE_KEY=your private key
+- STRATEGY_EXECUTOR_IP_ADDRESS=your IP address
+- STRATEGY_EXECUTOR_DISPLAY_NAME=your moniker
+- STRATEGY_EXECUTOR_BENEFICIARY=your wallet address for validator rewards
+- SIGNER_PRIVATE_KEY=your private key
 
 ### --------- After filling all necessary details -  Press Ctrl+X then Y then press Enter -----------
 
@@ -82,6 +86,25 @@ To Check if your docker image was created :
 docker ps
 ```
 If you can see your container id correctly then you are good.
+
+
+### ------ ADDITIONAL COMMANDS ------
+
+## Upgrade your Validator
+```bash
+docker kill elixir && \
+docker rm elixir && \
+docker pull elixirprotocol/validator:v3 && \
+docker run -d --env-file /root/elixir/validator.env --name elixir --restart unless-stopped elixirprotocol/validator:v3
+```
+
+## Check Metrics
+```bash
+docker run -d --env-file /root/elixir/validator.env --name elixir -p 17690:17690 elixirprotocol/validator:v3
+```
+
+
+
 
 
 
