@@ -106,8 +106,8 @@ docker run -d --env-file /root/elixir/validator.env --name elixir -p 17690:17690
 
 ### FOLLOW ME ON TWITTER AND OTHER PLATFORMS
 
-[Follow me on twitter ](https://x.com/Zek_eth)
-[Subscribe to my Medium blog ](https://medium.com/@thewatchman)
+- [Follow me on twitter ](https://x.com/Zek_eth)
+- [Subscribe to my Medium blog ](https://medium.com/@thewatchman)
 
 
 
